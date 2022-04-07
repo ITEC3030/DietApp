@@ -15,6 +15,7 @@ body {
 .container {
     display: flex;
     flex-direction: row;
+    width: 100%;
 }
   
 router-outlet + *  {
@@ -34,8 +35,6 @@ a:hover {
     opacity: 0.8;
 }
   
-
-  
 /* header */
 app-header {
     width: 100%;
@@ -54,6 +53,15 @@ app-header h1 {
     margin: 0;
 }
 
+app-header .img1 { 
+    border-radius: 50%;
+}
+            
+app-header .img2 { 
+    border-radius: 50%;
+    float: right
+}
+
 /* footer */
 app-footer {
     position:absolute;
@@ -68,13 +76,15 @@ app-footer {
     align-items: center;
 }
 
+
 app-side-bar {
-    padding:10px;
-    display: table;
+    padding:30px;
+    display: flex;
     height: calc(100vh - 140px);
     width:25%;
     min-width: 300px;
     max-width: 500px;
+    align-items: center;
     background-color: #44bbe6;
 }
 /*i dont think this is in use*/
@@ -91,25 +101,31 @@ app-side-bar p {
     font-size: larger;
     color: white;
 }
+
+app-food-list , app-today-list, app-pie-chart{
+    display: flex;
+    width: 100%;
+    background-color: black;
+    height: calc(100vh - 140px);
+}
 /*buttons for the side bar*/
-a:link, a:visited {
+.sidebar-button {
     background-color: rgb(129, 239, 102);
     color: white;
-    display: block;
     border-style: solid;
     border-color: white;
-    margin: 50px 110px 50px 110px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     border-radius: 25px;
-    padding: 15px; 
-    width: 200px;
+    padding: 15px;
+    width: 100%;
     height: 50px;
+    margin-top: 30px;
+    margin-bottom: 30px;
     font-family: "Lucida Console", "Courier New", monospace;
   }
-  
-  a:hover, a:active {
+  button.sidebar-button:hover {
     background-color: rgb(250, 203, 198);
   }
 /* paragraph header font*/
@@ -119,18 +135,4 @@ a:link, a:visited {
     text-transform: uppercase;
     color: white;
     font-size: 40px;
-    
-  }
-
-/*header image frame*/
-
-app-header .img1{ 
-
-  border-radius: 50%;
-}
-          
-app-header .img2{ 
-
-    border-radius: 50%;
-    float: right
   }
