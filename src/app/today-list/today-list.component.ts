@@ -6,9 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./today-list.component.css']
 })
 export class TodayListComponent implements OnInit {
-
   constructor() { }
-
   ngOnInit(): void {
   }
 

@@ -1,6 +1,8 @@
 <header><app-header></app-header></header>
 <div class="container">
   <app-side-bar></app-side-bar>
-  <app-food-list></app-food-list>
+  <app-food-list style='display:{{this.contentChanger.foodlist}};'></app-food-list>
+  <app-pie-chart style='display:{{this.contentChanger.piechart}};'></app-pie-chart>
+  <app-today-list style='display:{{this.contentChanger.todaylist}};'></app-today-list>
 </div>
 <footer><app-footer></app-footer></footer>

@@ -6,9 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./food-list.component.css']
 })
 export class FoodListComponent implements OnInit {
-
   constructor() { }
-
   ngOnInit(): void {
   }
 

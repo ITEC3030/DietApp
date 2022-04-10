@@ -8,18 +8,10 @@ import { ContentChangerService } from '../content-changer.service';
 })
 export class SideBarComponent implements OnInit {
   handleClick(event: Event, value: String) { 
-    console.log('Click!', value) 
-    if (value == 'foodlist'){
-      //show foodlist
-    }
-    else if (value == 'today') {
-      //show today
-    }
-    else {
-      //show chart
-    }
-  }   
-  constructor() { }
+    this.contentChanger.changeContent(value);
+  } 
+  
+  constructor(private contentChanger:ContentChangerService) { }
 
   ngOnInit(): void {
   }
